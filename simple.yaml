@@ -1,0 +1,21 @@
+name: simple
+base:
+
+  preload_docker_images: []
+  kernel_image: "quay.io/testfaster/ignite-kernel"
+  os_dockerfile: |-
+    FROM quay.io/testfaster/kube-ubuntu
+    RUN echo hello > /tmp/bump
+    RUN apt-get update -y
+    RUN apt-get install nginx -y
+
+runtime:
+  cpus: 1
+  memory: 2GB
+  disk: 10GB
+
+prewarm_pool_size: 2
+max_pool_size: 2
+default_lease_timeout: 10h
+default_lease_allocation_timeout: 10h
+pool_sleep_timeout: never
