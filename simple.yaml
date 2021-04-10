@@ -5,7 +5,7 @@ base:
   kernel_image: "quay.io/testfaster/ignite-kernel"
   os_dockerfile: |-
     FROM quay.io/testfaster/kube-ubuntu
-    RUN echo hello > /tmp/bump
+    RUN echo hello2 > /tmp/bump
     RUN apt-get update -y
     RUN apt-get install nginx -y
 
