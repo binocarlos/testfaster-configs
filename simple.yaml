@@ -22,8 +22,13 @@ pool_sleep_timeout: never
 launch:
   title: My test launch stack
   buttons:
-    - title: Hello
-    - title: Apples
+    - title: Istio
+      port: 31380
+    - title: Foo
+      path: /apples
+      port: 30600
+    - title: Bar
+      url: https://google.com
   homepage: |
     ## hello welcome
 
